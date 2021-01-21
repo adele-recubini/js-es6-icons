@@ -105,21 +105,37 @@ const arrayOggetti = [
 const myContainer = document.getElementById('container');
 arrayOggetti.forEach((element) => {
 
-  let colorIcon;
 
-  if(element.type === 'animal') {
-     colorIcon = 'blue';
-  }if(element.type === 'vegetable') {
-     colorIcon = 'orange';
-  }if (element.type ==='human') {
-    colorIcon = 'red';
-  }
+let colorArray =['blue' , 'orange' , 'red']
+
+
+if(element.type === 'animal') {
+   colorArray = colorArray[0];
+}if(element.type === 'vegetable') {
+  colorArray = colorArray[1];
+}if (element.type ==='human') {
+  colorArray = colorArray[2];
+}
+
+
+
+
+
+  // let colorIcon;
+  //
+  // if(element.type === 'animal') {
+  //    colorIcon = 'blue';
+  // }if(element.type === 'vegetable') {
+  //    colorIcon = 'orange';
+  // }if (element.type ==='human') {
+  //   colorIcon = 'red';
+  // }
 
 
   myContainer.innerHTML+=
   `
   <div>
-    <i class="${element.family} ${element.prefisso}-${element.name}" style ='color:${colorIcon}'></i>
+    <i class="${element.family} ${element.prefisso}-${element.name}" style ='color:${colorArray}'></i>
   </div>
 
   `
