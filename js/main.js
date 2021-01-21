@@ -5,117 +5,104 @@
 const arrayOggetti = [
    {
      'name' : 'cat',
-      'prefisso': 'c',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'crow',
-      'prefisso': 'c',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'dog',
-      'prefisso': 'd',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'dove',
-      'prefisso': 'd',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'dragon',
-      'prefisso': 'd',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'horse',
-      'prefisso': 'h',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'hippo',
-      'prefisso': 'h',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'fish',
-      'prefisso': 'f',
+      'prefisso': 'fa',
       'type': 'animal',
       'family': 'fas',
    },
    {
      'name' : 'carrot',
-      'prefisso': 'c',
+      'prefisso': 'fa',
       'type': 'vegetable',
       'family': 'fas',
    },
    {
      'name' : 'apple-alt',
-      'prefisso': 'a',
+      'prefisso': 'fa',
       'type': 'vegetable',
       'family': 'fas',
    },
    {
      'name' : 'lemon',
-      'prefisso': 'l',
+      'prefisso': 'fa',
       'type': 'vegetable',
       'family': 'fas',
    },
    {
      'name' : 'pepper-hot',
-      'prefisso': 'p',
+      'prefisso': 'fa',
       'type': 'vegetable',
       'family': 'fas',
    },
    {
      'name' : 'user-astronaut',
-      'prefisso': 'u',
+      'prefisso': 'fa',
       'type': 'human',
       'family': 'fas',
    },
    {
      'name' : 'user-graduat',
-      'prefisso': 'u',
+      'prefisso': 'fa',
       'type': 'human',
       'family': 'fas',
    },
    {
      'name' : 'user-ninja',
-      'prefisso': 'u',
+      'prefisso': 'fa',
       'type': 'human',
       'family': 'fas',
    },
  ]
 
-// popolo di icone i div che mi sono creata su html
+
 const myContainer = document.getElementById('container');
 arrayOggetti.forEach((element) => {
   myContainer.innerHTML+=
   `
   <div>
-    <i class="fas fa-cat"></i>
+    <i class="${element.family} ${element.prefisso}-${element.name}"></i>
   </div>
 
   `
-  // `
-  // <div>
-  // <i class="fas fa-crow"></i>
-  // </div>
-  //
-  // `
-  // `
-  // <div>
-  // <i class="fas fa-dove"></i>
-  // </div>
-  //
-  // `
-
 });
