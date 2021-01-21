@@ -173,6 +173,10 @@ const selector = $('.color-select');
 selector.change(function() {
   let valore = $(this).val();
 
+  if (valore === blue ) {
+
+  }
+
 
 
 })
