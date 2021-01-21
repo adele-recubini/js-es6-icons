@@ -153,7 +153,7 @@ if(element.type === 'animal') {
 
   myContainer.innerHTML+=
   `
-  <div>
+  <div class = "icone">
     <i class="${element.family} ${element.prefisso}-${element.name}" style ='color:${colorArray}'></i>
   </div>
 
