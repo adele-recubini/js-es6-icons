@@ -117,6 +117,8 @@ if(!types.includes(element.type)){
   types.push(element.type);
 }
 
+
+
 const typeIndex = types.indexOf(element.type)
 
 if(typeIndex !== -1 ){
@@ -124,12 +126,17 @@ if(typeIndex !== -1 ){
 }
 
 if(element.type === 'animal') {
-   colorArray = colorArray[0];
+   element.color = colorArray[0];
+   colorArray=colorArray[0];
 }if(element.type === 'vegetable') {
-  colorArray = colorArray[1];
+  element.color = colorArray[1];
+  colorArray=colorArray[1];
 }if (element.type ==='human') {
-  colorArray = colorArray[2];
+  element.color = colorArray[2];
+  colorArray=colorArray[2];
 }
+
+
 
 // se non avessimo avuto l array
 
