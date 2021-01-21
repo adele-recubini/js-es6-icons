@@ -96,51 +96,26 @@ const arrayOggetti = [
  ]
 
 // popolo di icone i div che mi sono creata su html
-
+const myContainer = document.getElementById('container');
 arrayOggetti.forEach((element) => {
+  myContainer.innerHTML+=
+  `
+  <div>
+    <i class="fas fa-cat"></i>
+  </div>
+
+  `
+  // `
+  // <div>
+  // <i class="fas fa-crow"></i>
+  // </div>
+  //
+  // `
+  // `
+  // <div>
+  // <i class="fas fa-dove"></i>
+  // </div>
+  //
+  // `
 
 });
-
-
-
-
-// Gatto
-const iconCat = document.getElementById('icon-cat');
-
-iconCat.innerHTML+=
-`
-<div>
-  <i class="fas fa-cat"></i>
-</div>
-
-`
-// crow
-const iconCrow = document.getElementById('icon-crow');
-
-iconCrow.innerHTML+=
-`
-<div>
-<i class="fas fa-crow"></i>
-</div>
-
-`
-// dog
-const iconDog = document.getElementById('icon-dog');
-
-iconDog.innerHTML+=
-`
-<div>
-<i class="fas fa-dog"></i>
-</div>
-
-`
-// dog
-const iconDog = document.getElementById('icon-dog');
-
-iconDove.innerHTML+=
-`
-<div>
-<i class="fas fa-dove"></i>
-</div>
-
-`
