@@ -107,12 +107,12 @@ arrayOggetti.forEach((element) => {
 
   let colorIcon;
 
-  if('type' === 'animal') {
+  if(element.type === 'animal') {
      colorIcon = 'blue';
-  }if('type' === 'vegetable') {
+  }if(element.type === 'vegetable') {
      colorIcon = 'orange';
-  }if ('type' ==='human') {
-    colorIcon = 'red'
+  }if (element.type ==='human') {
+    colorIcon = 'red';
   }
 
 
