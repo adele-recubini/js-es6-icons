@@ -97,6 +97,7 @@ const arrayOggetti = [
       'prefisso': 'fa',
       'type': 'human',
       'family': 'fas',
+
    },
  ]
 
@@ -109,7 +110,7 @@ arrayOggetti.forEach((element) => {
   if('type' === 'animal') {
      colorIcon = 'blue';
   }if('type' === 'vegetable') {
-     color = 'orange';
+     colorIcon = 'orange';
   }if ('type' ==='human') {
     colorIcon = 'red'
   }
