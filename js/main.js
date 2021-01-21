@@ -108,6 +108,7 @@ const arrayOggetti = [
 
 
 const myContainer = document.getElementById('container');
+
 arrayOggetti.forEach((element) => {
 
 let  colorArray =['blue' , 'orange' , 'red']
@@ -137,20 +138,6 @@ if(element.type === 'animal') {
 }
 
 
-
-// se non avessimo avuto l array
-
-  // let colorIcon;
-  //
-  // if(element.type === 'animal') {
-  //    colorIcon = 'blue';
-  // }if(element.type === 'vegetable') {
-  //    colorIcon = 'orange';
-  // }if (element.type ==='human') {
-  //   colorIcon = 'red';
-  // }
-
-
   myContainer.innerHTML+=
   `
   <div class = "icone">
@@ -160,3 +147,32 @@ if(element.type === 'animal') {
   `
 });
 console.log(arrayOggetti);
+
+
+
+
+const colorSelect = document.getElementsByClassName('color-select')[0];
+
+// filtriamo in base al colore creando un array vuoto dove andranno tutti i miei oggetti associati alla chiave colore
+const colorList = [];
+arrayOggetti.forEach((element) => {
+  if(!colorList.includes(element.color)) {
+    colorList.push(element.color);
+  }
+});
+
+// per tutti i colori associo gli elementi che andranno a popolare nell html la classe color select e come valori gli elementi
+colorList.forEach((element) => {
+  colorSelect.innerHTML += `
+  <option value="${element}">${element}</option>
+  `
+});
+
+const selector = $('.color-select');
+
+selector.change(function() {
+  let valore = $(this).val();
+
+
+
+})
