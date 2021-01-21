@@ -6,6 +6,11 @@
 // - Definire un array di colori e associare ad ogni tipo di icona un colore.
 // - Visualizzare le icone di colore diverso in base al tipo.
 
+// Milestone 3:
+// - Aggiungere una select per filtrare le icone in base al tipo.
+// - Popolare le options della select dinamicamente e, ogni volta che cambia il valore selezionato, visualizzare le icone corrispondenti.
+
+
 
 const arrayOggetti = [
    {
@@ -105,9 +110,18 @@ const arrayOggetti = [
 const myContainer = document.getElementById('container');
 arrayOggetti.forEach((element) => {
 
+let  colorArray =['blue' , 'orange' , 'red']
+const types = [];
 
-let colorArray =['blue' , 'orange' , 'red']
+if(!types.includes(element.type)){
+  types.push(element.type);
+}
 
+const typeIndex = types.indexOf(element.type)
+
+if(typeIndex !== -1 ){
+  element.color =colorArray[typeIndex]
+}
 
 if(element.type === 'animal') {
    colorArray = colorArray[0];
@@ -117,9 +131,7 @@ if(element.type === 'animal') {
   colorArray = colorArray[2];
 }
 
-
-
-
+// se non avessimo avuto l array
 
   // let colorIcon;
   //
@@ -140,16 +152,4 @@ if(element.type === 'animal') {
 
   `
 });
-
-
-// // Milestone 2:
-// - Definire un array di colori e associare ad ogni tipo di icona un colore.
-// - Visualizzare le icone di colore diverso in base al tipo.
-
-
-
-
-//
-// <div>
-//   <i class="${element.family} ${element.prefisso}-${element.name}"></i>
-// </div>
+console.log(arrayOggetti);
