@@ -2,6 +2,11 @@
 // - Definire un array di oggetti; ogni oggetto rappresenta un'icona, che è caratterizzata da: nome, prefisso, tipo e famiglia.
 // - Utilizzando la funzione forEach e il template literal, visualizzare in pagina tutte le icone con il proprio nome.
 
+// // Milestone 2:
+// - Definire un array di colori e associare ad ogni tipo di icona un colore.
+// - Visualizzare le icone di colore diverso in base al tipo.
+
+
 const arrayOggetti = [
    {
      'name' : 'cat',
@@ -82,7 +87,7 @@ const arrayOggetti = [
       'family': 'fas',
    },
    {
-     'name' : 'user-graduat',
+     'name' : 'user-graduate',
       'prefisso': 'fa',
       'type': 'human',
       'family': 'fas',
@@ -98,11 +103,36 @@ const arrayOggetti = [
 
 const myContainer = document.getElementById('container');
 arrayOggetti.forEach((element) => {
+
+  let colorIcon;
+
+  if('type' === 'animal') {
+     colorIcon = 'blue';
+  }if('type' === 'vegetable') {
+     color = 'orange';
+  }if ('type' ==='human') {
+    colorIcon = 'red'
+  }
+
+
   myContainer.innerHTML+=
   `
   <div>
-    <i class="${element.family} ${element.prefisso}-${element.name}"></i>
+    <i class="${element.family} ${element.prefisso}-${element.name}" style ='color:${colorIcon}'></i>
   </div>
 
   `
 });
+
+
+// // Milestone 2:
+// - Definire un array di colori e associare ad ogni tipo di icona un colore.
+// - Visualizzare le icone di colore diverso in base al tipo.
+
+
+
+
+//
+// <div>
+//   <i class="${element.family} ${element.prefisso}-${element.name}"></i>
+// </div>
