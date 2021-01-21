@@ -173,10 +173,13 @@ const selector = $('.color-select');
 selector.change(function() {
   let valore = $(this).val();
 
-  if (valore === blue ) {
+  if (valore === 'blue' ) {
+     arrayOggetti.filter((element) => {
+    return element.color === 'blue'
+  
+  })
 
   }
-
 
 
 })
